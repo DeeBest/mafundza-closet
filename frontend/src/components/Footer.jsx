@@ -26,11 +26,23 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex items-center justify-center w-full gap-2 text-lg ">
-          <FaFacebook className="duration-300 hover:text-gray-400 " />
-          <FaWhatsapp className="duration-300 hover:text-gray-400 " />
+          <Link
+            to="https://www.facebook.com/princess.jeanette.35"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="duration-300 hover:text-gray-400 " />
+          </Link>
+          <Link
+            to="https://wa.me/+27799887080"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="duration-300 hover:text-gray-400 " />
+          </Link>
           <FaInstagram className="duration-300 hover:text-gray-400 " />
         </div>
-        <div className="flex items-center justify-between w-full text-xs text-gray-400 ">
+        <div className="flex flex-col items-center justify-between w-full text-xs text-gray-400 sm:flex-row ">
           <p>
             &copy;All Rights Reserved || Mafundza's Closet{' '}
             {new Date().getFullYear()}.

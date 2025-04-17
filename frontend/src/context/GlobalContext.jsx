@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 export const GlobalContext = createContext();
 
@@ -30,7 +31,7 @@ const GlobalContextProvider = ({ children }) => {
 
   return (
     <GlobalContext.Provider value={globalContextValue}>
-      {isLoading ? <h1>Loading...</h1> : children}
+      {isLoading ? <LoadingSpinner /> : children}
     </GlobalContext.Provider>
   );
 };
