@@ -10,7 +10,7 @@ const GlobalContextProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const res = await fetch(
-        'http://localhost:5000/api/products/getAllProducts'
+        'https://mafundzaclosetbackend.onrender.com/api/products/getAllProducts'
       );
       const data = await res.json();
 

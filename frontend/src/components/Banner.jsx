@@ -2,7 +2,7 @@ import bannerImage from '../assets/bannerImg.jpg';
 
 const Banner = () => {
   return (
-    <section className="w-full h-[400px] bg-gradient-to-b from-pink-100 to-white flex items-center gap-5 p-2 mt-16">
+    <section className="w-full flex-col sm:flex-row sm:h-[400px] bg-gradient-to-b from-pink-100 to-white flex items-center gap-5 p-2 mt-16">
       <div className="flex flex-col flex-1 gap-3 ">
         <h1 className="text-4xl font-extrabold">Exclusive Offers For You</h1>
         <p className="font-bold text-gray-400 ">
