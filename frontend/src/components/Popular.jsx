@@ -37,8 +37,8 @@ const Popular = () => {
     <div className="flex flex-col items-center w-full gap-3 mt-10 ">
       <h3 className="font-mono text-2xl font-bold ">Popular Products</h3>
       <hr className="h-[2px] w-1/2 bg-amber-600 mb-10 " />
-      <div className="flex flex-col w-full sm:max-w-[700px] sm:max-h-[650px] gap-2">
-        <div className="flex gap-2 w-full sm:h-[400px] flex-col-reverse sm:flex-row ">
+      <div className="flex flex-col w-full sm:max-w-[700px]  gap-2">
+        <div className="flex flex-col-reverse w-full gap-2 sm:flex-row ">
           <div className="overflow-hidden sm:relative sm:flex-1">
             {suits && suits.length > 0 && (
               <img
@@ -64,7 +64,7 @@ const Popular = () => {
             )}
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center w-full sm:h-[200px] gap-2 overflow-hidden">
+        <div className="flex flex-col items-center justify-center w-full gap-2 overflow-hidden sm:flex-row">
           {weaves &&
             weaves.length > 0 &&
             weaves.map((weave) => (

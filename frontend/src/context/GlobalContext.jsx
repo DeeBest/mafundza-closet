@@ -1,6 +1,10 @@
 import { createContext, useEffect, useState } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+const productionBackend = 'https://mafundzaclosetbackend.onrender.com/api';
+
+const devBackend = 'http://localhost:5000/api';
+
 export const GlobalContext = createContext();
 
 const GlobalContextProvider = ({ children }) => {
@@ -10,9 +14,8 @@ const GlobalContextProvider = ({ children }) => {
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(
-        'https://mafundzaclosetbackend.onrender.com/api/products/getAllProducts'
-      );
+      const res = await fetch(`${devBackend}/products/getAllProducts`);
+
       const data = await res.json();
 
       setProducts(data.products);

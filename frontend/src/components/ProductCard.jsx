@@ -1,7 +1,7 @@
 const ProductCard = ({ product }) => {
   return (
-    <div className="w-full sm:w-[200px] flex flex-col gap-3 my-5 text-sm ">
-      <div className="w-full h-[200px] overflow-hidden rounded-t-md ">
+    <div className="w-full max-w-[300px] h-[400px] flex flex-col gap-3 my-5 text-sm ">
+      <div className="w-full overflow-hidden h-[70%] rounded-t-md ">
         <img
           src={product.productImage}
           alt={product.productTitle}
