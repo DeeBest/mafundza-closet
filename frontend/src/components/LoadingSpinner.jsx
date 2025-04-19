@@ -7,7 +7,7 @@ const LoadingSpinner = () => {
     <div className="flex items-center justify-center flex-1 w-full h-full animate-glow ">
       <Link to="/" className="flex items-center animate-bounce ">
         <h1 className="self-start -mr-32 font-serif text-4xl font-bold text-pink-700">
-          Mafundza's
+          Mafundza
         </h1>
         <div className="flex items-end">
           <FaShoppingBag className="text-8xl opacity-55 text-amber-600" />

@@ -22,7 +22,7 @@ const CategoryPage = () => {
 
   return (
     <section className="flex flex-col items-center justify-center w-full gap-5 ">
-      <div className="flex flex-col items-center justify-center w-full gap-4 p-4 rounded-md sm:flex-row bg-gradient-to-r from-pink-200 to-white mb-[60px] ">
+      <div className="flex flex-col items-center justify-center w-full gap-4 p-4 rounded-md sm:flex-row bg-gradient-to-r from-pink-200 to-white mb-[60px] sm:justify-between ">
         <div className="flex flex-col items-center justify-between gap-4 ">
           <h1 className="font-mono text-4xl font-semibold text-center text-amber-600 ">
             Latest In {category}
