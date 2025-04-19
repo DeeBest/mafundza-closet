@@ -1,6 +1,6 @@
 const ProductCard = ({ product }) => {
   return (
-    <div className="w-full max-w-[300px] h-[400px] flex flex-col gap-3 my-5 text-sm ">
+    <div className="w-full max-w-[300px] h-[400px] flex flex-col gap-3 my-5 text-sm shadow-md shadow-[rgba(0,0,0,0.4)] rounded-md p-1 ">
       <div className="w-full overflow-hidden h-[70%] rounded-t-md ">
         <img
           src={product.productImage}
@@ -18,6 +18,9 @@ const ProductCard = ({ product }) => {
           {product.productDesc}
         </p>
       </div>
+      <button className="w-full px-2 py-1 font-bold text-white rounded-md bg-amber-600 ">
+        Add To Cart
+      </button>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link to="/" className="flex items-center ">
       <h1 className="self-start -mr-20 font-serif text-xl font-bold text-pink-700">
-        Mafundza's
+        Mafundza
       </h1>
       <div className="flex items-end">
         <FaShoppingBag className="text-5xl opacity-55 text-amber-600" />

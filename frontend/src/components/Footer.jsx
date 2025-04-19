@@ -44,13 +44,11 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center justify-between w-full text-xs text-gray-400 sm:flex-row ">
           <p>
-            &copy;All Rights Reserved || Mafundza's Closet{' '}
+            &copy;All Rights Reserved || Mafundza Closet{' '}
             {new Date().getFullYear()}.
           </p>
           <div className="flex flex-col items-center justify-center">
-            <p>
-              Developed & Maintained By Simphiwe {new Date().getFullYear()}.
-            </p>
+            <p>Developed & Maintained By Simphiwe.</p>
             <div className="flex gap-1">
               <Link
                 className="duration-500 hover:rotate-45"
