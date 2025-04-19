@@ -14,7 +14,7 @@ const GlobalContextProvider = ({ children }) => {
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(`${devBackend}/products/getAllProducts`);
+      const res = await fetch(`${productionBackend}/products/getAllProducts`);
 
       const data = await res.json();
 
