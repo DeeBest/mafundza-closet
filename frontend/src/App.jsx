@@ -8,10 +8,12 @@ import Men from './pages/Men';
 import Women from './pages/Women';
 import Kids from './pages/Kids';
 import CategoryPage from './pages/CategoryPage';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
     <div className="relative flex flex-col min-w-full min-h-full">
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route element={<MainLayout />}>

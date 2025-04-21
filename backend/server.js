@@ -11,8 +11,8 @@ const errorHandler = require('./middleware/errorHandler');
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.DB_URI);
-    // await mongoose.connect(process.env.DEV_DB_URI);
+    // await mongoose.connect(process.env.DB_URI);
+    await mongoose.connect(process.env.DEV_DB_URI);
 
     console.log('Database connected');
     app.listen(PORT, () => console.log(`Server running on ${PORT}`));

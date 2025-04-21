@@ -1,5 +1,6 @@
 import { FaArrowRight } from 'react-icons/fa';
 import heroImage from '../assets/heroImg.jpg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -11,9 +12,11 @@ const Hero = () => {
         <h1 className="text-xl font-extrabold sm:text-4xl">
           new collections for everyone
         </h1>
-        <button className="flex items-center self-center justify-center gap-3 px-3 py-1 text-sm text-white rounded-2xl bg-amber-600 whitespace-nowrap sm:text-lg ">
-          Latest Collections <FaArrowRight />
-        </button>
+        <a href="#new-collections">
+          <button className="flex items-center self-center justify-center gap-3 px-3 py-1 text-sm text-white rounded-2xl bg-amber-600 whitespace-nowrap sm:text-lg ">
+            Latest Collections <FaArrowRight />
+          </button>
+        </a>
       </div>
       <div className="flex-1 w-full h-full overflow-hidden rounded-xl">
         <img
