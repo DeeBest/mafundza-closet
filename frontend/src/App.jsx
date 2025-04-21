@@ -11,6 +11,8 @@ import CategoryPage from './pages/CategoryPage';
 import ScrollToTop from './components/ScrollToTop';
 import AddProduct from './components/AddProduct';
 import ErrorPage from './pages/ErrorPage';
+import AdminPage from './pages/AdminPage';
+import ProductsList from './components/ProductsList';
 
 const App = () => {
   return (
@@ -18,14 +20,18 @@ const App = () => {
       <ScrollToTop />
       <Header />
       <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
           <Route path="/kids" element={<Kids />} />
           <Route path="/products/:category" element={<CategoryPage />} />
-          <Route path="/products/add-product" element={<AddProduct />} />
+          <Route path="/admin" element={<AdminPage />}>
+            <Route index element={<AddProduct />} />
+            <Route path="/admin/products-list" element={<ProductsList />} />
+          </Route>
+
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
