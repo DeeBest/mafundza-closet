@@ -9,6 +9,8 @@ import Women from './pages/Women';
 import Kids from './pages/Kids';
 import CategoryPage from './pages/CategoryPage';
 import ScrollToTop from './components/ScrollToTop';
+import AddProduct from './components/AddProduct';
+import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/women" element={<Women />} />
           <Route path="/kids" element={<Kids />} />
           <Route path="/products/:category" element={<CategoryPage />} />
+          <Route path="/products/add-product" element={<AddProduct />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
       <Footer />

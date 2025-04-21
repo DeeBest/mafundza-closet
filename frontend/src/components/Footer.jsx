@@ -4,8 +4,8 @@ import {
   FaEnvelope,
   FaFacebook,
   FaGithub,
-  FaInstagram,
   FaLinkedin,
+  FaTiktok,
   FaWhatsapp,
 } from 'react-icons/fa';
 
@@ -40,7 +40,13 @@ const Footer = () => {
           >
             <FaWhatsapp className="duration-300 hover:text-gray-400 " />
           </Link>
-          <FaInstagram className="duration-300 hover:text-gray-400 " />
+          <Link
+            to="https://tiktok.com/@mafundzacloset"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok className="duration-300 hover:text-gray-400 " />
+          </Link>
         </div>
         <div className="flex flex-col items-center justify-between w-full text-xs text-gray-400 sm:flex-row ">
           <p>
