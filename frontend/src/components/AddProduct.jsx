@@ -26,8 +26,8 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-3 items-center justify-center ">
-      <h3 className="text-xl font-serif mb-5 ">Add New Product</h3>
+    <div className="flex flex-col items-center justify-center w-full gap-3 ">
+      <h3 className="mb-5 font-serif text-xl ">Add New Product</h3>
       <form className="flex gap-3 items-center justify-between w-full max-w-[400px] ">
         <input
           type="file"
@@ -38,7 +38,7 @@ const AddProduct = () => {
           }}
         />
         <button
-          className="bg-amber-600 text-white font-bold rounded-md p-1 hover:opacity-65 duration-300 whitespace-nowrap "
+          className="p-1 font-bold text-white duration-300 rounded-md bg-amber-600 hover:opacity-65 whitespace-nowrap "
           onClick={handleImageUpload}
         >
           Upload Image
@@ -57,25 +57,25 @@ const AddProduct = () => {
           placeholder="Name"
           value={productTitle}
           onChange={(e) => setProductTitle(e.target.value)}
-          className="w-full p-1 border border-amber-600 rounded-md text-sm "
+          className="w-full p-1 text-sm border rounded-md border-amber-600 "
         />
         <input
           type="number"
           placeholder="Price"
           value={productPrice}
           onChange={(e) => setProductPrice(Number(e.target.value))}
-          className="w-full p-1 border border-amber-600 rounded-md text-sm "
+          className="w-full p-1 text-sm border rounded-md border-amber-600 "
         />
         <textarea
           placeholder="Description"
           value={productDesc}
           onChange={(e) => setProductDesc(e.target.value)}
-          className="w-full p-1 border border-amber-600 rounded-md text-sm "
+          className="w-full p-1 text-sm border rounded-md border-amber-600 "
         />
         <select
           value={productCategory}
           onChange={(e) => setProductCategory(e.target.value)}
-          className="w-full p-1 border border-amber-600 rounded-md text-sm "
+          className="w-full p-1 text-sm border rounded-md border-amber-600 "
         >
           <option value="Uncategorized">Select Category</option>
           <option value="Shoes">Shoes</option>
@@ -86,7 +86,7 @@ const AddProduct = () => {
         </select>
         <button
           onClick={handleAddProduct}
-          className="bg-amber-600 text-white font-bold rounded-md self-center p-1 hover:opacity-65 whitespace-nowrap duration-300 "
+          className="self-center p-1 font-bold text-white duration-300 rounded-md bg-amber-600 hover:opacity-65 whitespace-nowrap "
         >
           Add Product
         </button>

@@ -32,6 +32,7 @@ app.get('/api', (req, res) => {
   res.status(200).json({ message: "Welcome to Mafundza's Closet application" });
 });
 
+app.use('/api/upload', require('./routes/productsImagesRoutes'));
 app.use('/api/products', require('./routes/productsRoutes'));
 
 app.use('*', (req, res) => {

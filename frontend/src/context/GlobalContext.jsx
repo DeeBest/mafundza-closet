@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import LoadingSpinner from '../components/LoadingSpinner';
+import myAxios from '../api/axios';
 
 const productionBackend = 'https://mafundzaclosetbackend.onrender.com/api';
 
@@ -14,12 +15,9 @@ const GlobalContextProvider = ({ children }) => {
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
-      // const res = await fetch(`${productionBackend}/products/getAllProducts`);
-      const res = await fetch(`${devBackend}/products/getAllProducts`);
+      const res = await myAxios.get(`/products/getAllProducts`);
 
-      const data = await res.json();
-
-      setProducts(data.products);
+      setProducts(res.data.products);
     } catch (error) {
       console.log(error);
     } finally {
