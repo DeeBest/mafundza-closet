@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import myAxios from '../api/axios';
+import useGlobalContext from '../hooks/useGlobalContext';
 
 const AddProduct = () => {
   const [productTitle, setProductTitle] = useState('');
@@ -7,6 +9,8 @@ const AddProduct = () => {
   const [productCategory, setProductCategory] = useState('Uncategorized');
   const [productImage, setProductImage] = useState('');
   const [productImagePreview, setProductImagePreview] = useState(null);
+
+  const { fetchProducts } = useGlobalContext();
 
   const handleAddProduct = async (e) => {
     e.preventDefault();
@@ -17,12 +21,41 @@ const AddProduct = () => {
       productCategory,
       productImage,
     };
-    console.log(newProduct);
+
+    try {
+      await myAxios.post('/products/addProduct', newProduct);
+
+      setProductCategory('uncategorized');
+      setProductDesc('');
+      setProductImage('');
+      setProductPrice(0);
+      setProductTitle('');
+
+      fetchProducts();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleImageUpload = async (e) => {
     e.preventDefault();
-    console.log('image upload');
+
+    const formData = new FormData();
+    formData.append('productImage', productImage);
+
+    try {
+      const res = await myAxios.post('/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      setProductImage(res.data.imageUrl);
+      document.getElementById('image-input').value = '';
+      setProductImagePreview(null);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -30,6 +63,7 @@ const AddProduct = () => {
       <h3 className="mb-5 font-serif text-xl ">Add New Product</h3>
       <form className="flex gap-3 items-center justify-between w-full max-w-[400px] ">
         <input
+          id="image-input"
           type="file"
           accept="image/*"
           onChange={(e) => {
